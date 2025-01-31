@@ -72,4 +72,55 @@ console.log(subtractAnswer);
 
 
 
+let username = "";
+if (username === "") {
+  console.log("You didnt enter your name");
+} else {
+  console.log("Hello " + username);
+}
 
+
+let myusername = "";
+while (myusername === "") {
+  console.log("Name not found");
+  myusername = window.prompt("Please enter your name");
+}
+console.log("while loop finished");
+console.log(`Hello ${myusername}`);
+
+//ANOTHER WAY VIA DO WHILE, RUN CODE FIRST, THEN CHECK CONDITION
+let myName;
+
+do {
+  myName = window.prompt("Please enter your name");
+}while (myName === "" || myName === null);
+
+let loggedIn = false;
+let myNewUserName;
+let myPassword;
+
+while (!loggedIn) {
+  myNewUserName = window.prompt("Please enter your username");
+  myPassword = window.prompt("Please enter your password");
+  if (myNewUserName === "username" && myPassword === "password") {
+    loggedIn = true;
+    console.log("You are logged in");
+  } else {
+    console.log("Incorrect username or password");
+  }
+}
+
+// FOR LOOPS //
+// Repeat some code a LIMITED amount of times
+
+
+for(let i = 2; i <= 10; i+=2) {
+  console.log("Hello");
+  console.log(i);
+}
+for(let i = 1; i <= 20; i++) {
+  if (i == 13) {
+    break;
+  }
+  console.log(i);
+} console.log("Loop exited");
